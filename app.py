@@ -14,6 +14,8 @@ if "edit_index" not in st.session_state:
 
 # add input for task
 task = st.text_input("enter your Item here", key=f"add_task{add}")
+if task in st.session_state.todo:
+    st.warning("Ooopss... Item already exists!!!")
 
 
 # add items
